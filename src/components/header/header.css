@@ -1,0 +1,212 @@
+.home {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: url(../../assets/background.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+    align-items: center;
+    grid-gap: 4rem;
+}
+
+.home-text h1 {
+    margin: 10px 0px 25px;
+    font-size: 4.3rem;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.home-text h5 {
+    margin-bottom: 23px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.home-text h3 {
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.home-text p {
+    font-size: var(--p-font);
+    color: var(--secound-color);
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #205375;
+    font-size: 17px;
+    color: var(--bg-color);
+    margin-right: 22px;
+    margin-bottom: 30px;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    background: var(--main-color);
+    transition: .3s;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--bg-color);
+    background: var(--main-color);
+    font-size: var(--p-font);
+    padding: 10px 40px;
+    font-weight: 500;
+    line-height: 24px;
+    border-radius: 30px;
+    transition: ease .3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Media Query */
+@media (max-width: 1425px) {
+    .home-text h1 {
+        font-size: 2.9rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .home {
+        min-height: 100vh;
+    }
+
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    .top-btn {
+        padding: 8px 15px;
+        font-size: 15px;
+    }
+
+    .home-img img {
+        width: 350px;
+    }
+
+    .home-text h1 {
+        font-size: 2.6rem;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-img img {
+        width: 320px;
+    }
+
+    .home-text h5 {
+        font-size: 16px;
+    }
+
+    .home-text p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 26px;
+    }
+}
+
+@media (max-width: 900px) {
+    .home {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .home h1 {
+        font-size: 3rem;
+    }
+
+    .home-text h5 {
+        font-size: 16px;
+    }
+
+    .home-text p {
+        font-size: 16px;
+    }
+
+    .home-img img {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .home {
+        min-height: 80vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .home h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 2.2rem;
+    }
+
+    .home img {
+        width: 220px;
+    }
+}
+
+@media (max-width: 320px) {
+    .home-text h3 {
+        margin-top: 60px;
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .home h1 {
+        font-size: 34px;
+    }
+
+    .home-text p {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .social a {
+        width: 30px;
+        height: 30px;
+        margin-right: 6px
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 20px;
+    }
+
+    .home img {
+        width: 220px;
+    }
+}
