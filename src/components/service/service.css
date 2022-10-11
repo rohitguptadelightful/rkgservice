@@ -1,18 +1,25 @@
+.service-container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
 .service-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto));
     grid-gap: 2rem;
     align-items: center;
-    margin-top: 5rem;
+    padding-top: 5rem;
 }
 
 .row {
-    background: #ffffff;
-    box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
-    border-radius: 12px;
-    padding: 45px 45px 45px 45px;
+    padding: 45px;
     transition: ease .3s;
     cursor: pointer;
+}
+
+.row:hover {
+    box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+    border-radius: 12px;
 }
 
 .s img {
@@ -39,13 +46,13 @@
 .row h3 {
     font-size: 24px;
     font-weight: 500;
-    margin-bottom: 2px;
+    padding-bottom: 2px;
 }
 
 .row h5 {
     font-size: 17px;
     font-weight: 500;
-    margin-bottom: 19px;
+    padding-bottom: 18px;
 }
 
 .row p {
@@ -53,30 +60,94 @@
     color: var(--secound-color);
     line-height: 28px;
     text-align: justify;
-    ;
 }
 
 .row .btn {
-    margin: 20px 10px 10px;
+    margin: 20px 20px 20px 0;
 }
 
 .order {
     background: #205375;
+    outline: none;
 }
 
-.row:hover {
-    will-change: transform;
-    transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05, 1.05, 1.05);
+.order span {
+    color: var(--bg-color);
 }
 
-@media (max-width: 480px) {
-    .service-content {
-        grid-template-columns: repeat(1, minmax(260px, auto));
+/* Media Query */
+@media (max-width: 1100px) {
+    .service-container {
+        width: 896px;
+        padding: 35px;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 972px) {
+    .service-container {
+        width: 768px;
+        padding: 35px;
+    }
+}
+
+@media (max-width: 844px) {
+    .service-container {
+        width: 640px;
+    }
+}
+
+@media (max-width: 716px) {
+    .service-container {
+        width: 512px;
+    }
+}
+
+@media (max-width: 588px) {
+    .service-container {
+        width: 384px;
+    }
+
+    .row {
+        padding: 35px;
+    }
+
     .service-content {
-        grid-template-columns: repeat(1, minmax(240px, auto));
+        text-align: center;
+        grid-template-columns: repeat(1, minmax(260px, auto));
+    }
+
+    .row .btn {
+        margin: 12px;
+    }
+}
+
+@media (max-width: 460px) {
+    .service-container {
+        width: 256px;
+        padding: 25px;
+    }
+
+    .row {
+        padding: 25px;
+    }
+
+    .service-content {
+        grid-template-columns: repeat(1, minmax(200px, auto));
+    }
+
+    .row h3 {
+        font-size: 1rem;
+    }
+
+    .row h5 {
+        font-size: 0.6rem;
+    }
+
+    .service-content{
+        padding-top: 2rem;
+    }
+
+    .order{
+        padding: 10px 14px;
     }
 }

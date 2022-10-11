@@ -1,28 +1,33 @@
-.home {
+#home {
     min-height: 100vh;
-    height: 100%;
-    width: 100%;
     background: url(../../assets/background.webp);
     background-size: cover;
     background-position: center;
-    position: relative;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+.home {
+    width: 1024px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
-    align-items: center;
-    grid-gap: 4rem;
+}
+
+.home-text {
+    margin: auto;
 }
 
 .home-text h1 {
-    margin: 10px 0px 25px;
-    font-size: 4.3rem;
+    padding: 20px 0 20px;
+    font-size: 3rem;
     line-height: 1;
     font-weight: 500;
 }
 
 .home-text h5 {
-    margin-bottom: 23px;
-    font-size: 19px;
+    padding-bottom: 10px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -36,7 +41,7 @@
     font-size: var(--p-font);
     color: var(--secound-color);
     line-height: 28px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .social a {
@@ -62,151 +67,93 @@
 .btn {
     display: inline-block;
     color: var(--bg-color);
-    background: var(--main-color);
     font-size: var(--p-font);
-    padding: 10px 40px;
+    background: var(--main-color);
+    padding: 10px 20px;
+    margin-right: 20px;
     font-weight: 500;
     line-height: 24px;
-    border-radius: 30px;
+    border-radius: 12px;
+    border: none;
     transition: ease .3s;
+}
+
+.blue {
+    background: #205375;
 }
 
 .btn:hover {
     transform: scale(1.1);
 }
 
+.home-img img {
+    vertical-align: middle;
+    width: 512px
+}
+
 /* Media Query */
-@media (max-width: 1425px) {
-    .home-text h1 {
-        font-size: 2.9rem;
-    }
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     .home {
-        min-height: 100vh;
-    }
-
-    .logo img {
-        width: 80px;
-        height: auto;
-    }
-
-    .top-btn {
-        padding: 8px 15px;
-        font-size: 15px;
-    }
-
-    .home-img img {
-        width: 350px;
+        width: 896px;
     }
 
     .home-text h1 {
-        font-size: 2.6rem;
-    }
-
-}
-
-@media (max-width: 1024px) {
-
-    .home-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .home-img img {
-        width: 320px;
-    }
-
-    .home-text h5 {
-        font-size: 16px;
-    }
-
-    .home-text p {
-        font-size: 14px;
-    }
-
-    .btn {
-        padding: 8px 26px;
-    }
-}
-
-@media (max-width: 900px) {
-    .home {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .home h1 {
-        font-size: 3rem;
-    }
-
-    .home-text h5 {
-        font-size: 16px;
-    }
-
-    .home-text p {
-        font-size: 16px;
-    }
-
-    .home-img img {
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 768px) {
-    #menu-icon {
-        display: block;
-        margin: 0 auto;
-    }
-
-    .home {
-        min-height: 80vh;
-    }
-}
-
-@media (max-width: 600px) {
-    .home h1 {
-        font-size: 2.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .home h1 {
         font-size: 2.2rem;
     }
+}
 
-    .home img {
-        width: 220px;
+@media (max-width: 972px) {
+    .home {
+        width: 768px;
+    }
+
+    .home-img img {
+        width: 384px;
     }
 }
 
-@media (max-width: 320px) {
-    .home-text h3 {
-        margin-top: 60px;
-        font-size: 12px;
-        text-align: justify;
+@media (max-width: 844px) {
+    .home {
+        width: 640px;
     }
 
-    .home h1 {
-        font-size: 34px;
+    .home {
+        grid-template-columns: repeat(1, minmax(220px, auto));
+        grid-gap: 4rem;
     }
 
-    .home-text p {
-        font-size: 16px;
-        text-align: justify;
+    .home-img {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 716px) {
+    .home {
+        width: 512px;
+    }
+}
+
+@media (max-width: 588px) {
+    .home {
+        width: 384px;
+    }
+}
+
+@media (max-width: 460px) {
+    .home {
+        width: 256px;
+    }
+
+    .home-text h1 {
+        font-size: 1.4rem;
     }
 
     .social a {
-        width: 30px;
-        height: 30px;
-        margin-right: 6px
+        margin-right: 16px;
     }
 
-    .btn {
-        font-size: 12px;
-        padding: 6px 20px;
-    }
-
-    .home img {
-        width: 220px;
+    .home-img img{
+        width: 256px;
     }
 }
